@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CustomerComponent } from "./customer/customer.component";
+import { TicketComponent } from "./ticket/ticket.component";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'koonts';
+  title = 'Koonts Consulting';
+
 }
