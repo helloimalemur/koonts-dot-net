@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CustomerComponent } from "./customer/customer.component";
 import { TicketComponent } from "./ticket/ticket.component";
+import {OverlayContainer} from "@angular/cdk/overlay";
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +13,9 @@ import { TicketComponent } from "./ticket/ticket.component";
 })
 export class AppComponent {
   title = 'Koonts Consulting';
+  //themeClass: String;
 
+  constructor(
+    //private overlayContainer:OverlayContainer
+  ) {}
 }
