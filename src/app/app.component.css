@@ -39,6 +39,7 @@ p {
   background-color: #6f19d2;
   color: white;
   font-weight: 600;
+  padding-left: 60px;
 }
 
 .toolbar img {
@@ -158,8 +159,12 @@ svg#rocket-smoke {
 }
 
 a {
-  color: #018154;
+  color: #bdc984;
 }
+a:link{
+  text-decoration: none;
+}
+
 a:visited {
 
 }
@@ -173,7 +178,7 @@ a:hover {
 }
 
 a:hover {
-  color: #018154;
+  color: #ddffa5;
 }
 
 .terminal {
