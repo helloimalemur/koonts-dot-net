@@ -174,7 +174,6 @@ a::before {
 
 a:hover {
   color: darkred;
-  content: "♥";
 }
 
 a:hover {
