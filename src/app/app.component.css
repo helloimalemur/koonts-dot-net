@@ -165,11 +165,11 @@ a:visited {
 }
 /* Add a heart before links */
 a::before {
+}
+
+a:hover {
   color: darkred;
   content: "♥";
-}
-a:hover {
-
 }
 
 a:hover {
