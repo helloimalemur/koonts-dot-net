@@ -44,11 +44,11 @@ p {
   background-color: #6f19d2;
   color: #691c1c;
   font-weight: 600;
-  padding-left: 60px;
+  padding-left: 10px;
 }
 
 .toolbar img {
-  margin: 0 16px;
+  margin: 0 10px;
 }
 
 .toolbar #twitter-logo {
@@ -99,11 +99,11 @@ svg.material-icons:not(:last-child) {
 
 .card {
   all: unset;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: rgba(127, 68, 248, 0.32);
-  height: 30px;
-  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  background-color: rgba(122, 117, 133, 0.32);
+  height: 35px;
+  width: 140px;
   margin: 0 8px 16px;
   padding: 10px;
   display: flex;
@@ -120,7 +120,7 @@ svg.material-icons:not(:last-child) {
 
 .card.card-small {
   height: 16px;
-  width: 168px;
+  width: 60px;
 }
 
 .card-container .card:not(.highlight-card) {
@@ -147,7 +147,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card.card.highlight-card span {
-  margin-left: 60px;
+  margin-left: 20px;
 }
 
 
@@ -247,7 +247,7 @@ footer a {
   }
 
   .card.highlight-card span {
-    margin-left: 72px;
+    margin-left: 20px;
   }
 
 }
