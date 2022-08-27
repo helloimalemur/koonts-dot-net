@@ -10,6 +10,7 @@ import { ConsultingComponent } from './consulting/consulting.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { TicketformComponent } from './ticketform/ticketform.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
     ConsultingComponent,
     PortfolioComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    TicketformComponent
   ],
   imports: [
     BrowserModule,
