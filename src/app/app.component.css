@@ -1,3 +1,8 @@
+.title {
+  color: #ddffa5;
+  margin: 30px;
+}
+
 .mat-app-background {
   height: 100%;
 }
@@ -38,7 +43,7 @@ p {
   top: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height: 60px;
   display: flex;
   align-items: center;
   background-color: #6f19d2;
@@ -68,8 +73,8 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
+  margin: 60px auto 32px;
+  padding: 0 10px;
   max-width: 1600px;
   flex-direction: column;
   align-items: center;
@@ -103,7 +108,7 @@ svg.material-icons:not(:last-child) {
   border: 2px solid #eee;
   background-color: rgba(122, 117, 133, 0.32);
   height: 35px;
-  width: 140px;
+  width: 180px;
   margin: 0 8px 16px;
   padding: 10px;
   display: flex;
