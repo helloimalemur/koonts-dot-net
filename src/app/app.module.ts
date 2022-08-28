@@ -19,17 +19,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
-const routes: Routes = [
-  { path: '', redirectTo: 'home-component', pathMatch: 'full' },
-  { path: 'home-component', component: HomeComponent },
-  { path: 'notfound-component', component: NotfoundComponent},
-  { path: 'customer-component', component: CustomerComponent },
-  { path: 'ticket-component', component: TicketComponent },
-  { path: 'consulting-component', component: ConsultingComponent},
-  { path: 'portfolio-component', component: PortfolioComponent },
-  { path: 'contact-component', component: ContactComponent },
-  { path: 'about-component', component: AboutComponent },
-];
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
@@ -43,13 +33,13 @@ const routes: Routes = [
     TicketformComponent,
     CustomerformComponent,
     HomeComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
     FormsModule
   ],
   providers: [],
