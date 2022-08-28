@@ -20,7 +20,8 @@ export class TicketformComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true
-    this.ticketservice.createTicket(this.model);
+    let req = this.ticketservice.createTicket(this.model);
+    req.subscribe();
 
   };
   clearForm() {
