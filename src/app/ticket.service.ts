@@ -12,16 +12,8 @@ import { HttpHeaders } from "@angular/common/http";
 export class TicketService {
 
   constructor(private http: HttpClient) { }
-  email = '';
-  summary = '';
-  type = '';
 
   url="http://localhost:8000/";
-
-
-  setEmail(email:string) {this.email = email;}
-  setSummary(summary:string) {this.summary = summary;}
-  setType(type:string) {this.type = type;}
 
 
   createTicket(ticket:Ticket): Observable<any> {
