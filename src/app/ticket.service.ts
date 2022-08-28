@@ -22,6 +22,10 @@ export class TicketService {
         'Content-Type': 'application/x-www-form-urlencoded'
       })
     }
-    return this.http.post(this.url, ticket, httpOptions);
+    let email = ticket.email;
+    let summary = ticket.summary;
+    let type = ticket.type;
+    let body = "email="+email+"&"+"summary="+summary+"&"+"type="+type;
+    return this.http.post(this.url, body, httpOptions);
   }
 }
