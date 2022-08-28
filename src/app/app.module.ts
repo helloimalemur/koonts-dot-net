@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { TicketformComponent } from './ticketform/ticketform.component';
 import {FormsModule} from "@angular/forms";
 import { CustomerformComponent } from './customerform/customerform.component';
+import { HttpClientModule } from "@angular/common/http";
+
 
 
 const routes: Routes = [
@@ -38,7 +40,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     FormsModule
