@@ -16,10 +16,11 @@ export class TicketformComponent implements OnInit {
     'Linux', 'Chrome OS'];
 
   model = new Ticket('','', '');
-  submitted = false;
+  confirm = false;
+  submitted: boolean | undefined;
 
   onSubmit() {
-    this.submitted = true
+    this.confirm = true
     let req = this.ticketservice.createTicket(this.model);
     req.subscribe();
 
