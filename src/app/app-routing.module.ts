@@ -11,16 +11,16 @@ import {HomeComponent} from "./home/home.component";
 import {PortfolioComponent} from "./portfolio/portfolio.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home-component', pathMatch: 'full' },
-  { path: 'home-component', component: HomeComponent },
-  { path: 'notfound-component', component: NotfoundComponent},
-  { path: 'customer-component', component: CustomerComponent },
-  { path: 'ticket-component', component: TicketComponent },
-  { path: 'consulting-component', component: ConsultingComponent},
-  { path: 'portfolio-component', component: PortfolioComponent },
-  { path: 'contact-component', component: ContactComponent },
-  { path: 'about-component', component: AboutComponent },
-  { path: '**', redirectTo: 'notfound-component' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'notfound', component: NotfoundComponent},
+  { path: 'customer', component: CustomerComponent },
+  { path: 'ticket', component: TicketComponent },
+  { path: 'consulting', component: ConsultingComponent},
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '**', redirectTo: 'notfound' }
 ];
 
 @NgModule({
