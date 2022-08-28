@@ -12,7 +12,7 @@ export class TicketService {
   constructor(private http: HttpClient) { }
   url="https://localhost:8000";
   httpHeaders = new HttpHeaders({
-    'Content-Type':'application/json',
+    'Content-Type':'text/plain',
     'Cache-Control':'no-cache',
   });
   options = { headers:this.httpHeaders };
