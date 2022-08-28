@@ -12,18 +12,24 @@ import { HttpHeaders } from "@angular/common/http";
 export class TicketService {
 
   constructor(private http: HttpClient) { }
-
+  email = '';
+  summary = '';
+  type = '';
 
   url="http://localhost:8000/";
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':'application/x-www-form-urlencoded'
-    })
-  }
 
+
+  setEmail(email:string) {this.email = email;}
+  setSummary(summary:string) {this.summary = summary;}
+  setType(type:string) {this.type = type;}
 
 
   createTicket(ticket:Ticket): Observable<any> {
-    return this.http.post(this.url, ticket, this.httpOptions);
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    }
+    return this.http.post(this.url, ticket, httpOptions);
   }
 }
