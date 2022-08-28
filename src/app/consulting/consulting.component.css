@@ -4,8 +4,12 @@
 .h1 {}
 .h2 {}
 
-.sla {
+.sla > * {
   alignment: left;
   font-size: 10px;
   line-height: 4px;
+  margin: 16px;
+}
+.arrange-horizontal > * {
+  display: inline-block;
 }
