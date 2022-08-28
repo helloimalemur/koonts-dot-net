@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ticket } from '../ticket/ticket';
 
 @Component({
   selector: 'app-ticketform',
@@ -8,6 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class TicketformComponent implements OnInit {
 
   constructor() { }
+
+  type = ['Mac', 'Windows',
+    'Linux', 'Chrome OS'];
+
+  model = new Ticket('test@gmail.com', 'test summary', 'mac');
+  submitted = false;
+
+  onSubmit() {this.submitted = true};
 
   ngOnInit(): void {
   }

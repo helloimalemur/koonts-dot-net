@@ -11,6 +11,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { TicketformComponent } from './ticketform/ticketform.component';
+import {FormsModule} from "@angular/forms";
+import { CustomerformComponent } from './customerform/customerform.component';
 
 
 const routes: Routes = [
@@ -31,13 +33,15 @@ const routes: Routes = [
     PortfolioComponent,
     ContactComponent,
     AboutComponent,
-    TicketformComponent
+    TicketformComponent,
+    CustomerformComponent
   ],
   imports: [
     BrowserModule,
 
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

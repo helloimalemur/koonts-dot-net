@@ -1,1 +1,15 @@
 <p>ticketform works!</p>
+<form #ticketForm = "ngForm">
+
+<input type="text" class="form-control" id="email"
+       required
+       [(ngModel)]="model.email" name="email">
+<br> Email: {{model.email}}
+
+<div class="form-group">
+  <label for="type">Type</label>
+  <select class="form-control" id="type" required>
+    <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
+  </select>
+</div>
+</form>
