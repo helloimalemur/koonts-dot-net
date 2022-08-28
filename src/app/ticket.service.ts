@@ -10,7 +10,7 @@ import { HttpHeaders } from "@angular/common/http";
 })
 export class TicketService {
   constructor(private http: HttpClient) { }
-  url="https://localhost:8000";
+  url="http://localhost:8000";
   httpHeaders = new HttpHeaders({
     'Content-Type':'text/plain',
     'Cache-Control':'no-cache',
@@ -19,6 +19,8 @@ export class TicketService {
 
 
   createTicket(ticket:Ticket): Observable<any> {
-    return this.http.post(this.url, ticket, this.options)
+    this.http.get("localhost:8000");
+    this.http.get(this.url, this.options);
+    return this.http.post(this.url, ticket, this.options);
   }
 }
