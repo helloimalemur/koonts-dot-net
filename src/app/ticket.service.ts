@@ -8,12 +8,17 @@ import { HttpHeaders } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
+
 export class TicketService {
+
   constructor(private http: HttpClient) { }
+
+
   url="http://localhost:8000/";
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':'text/plain',
+      'Content-Type':'application/x-www-form-urlencoded',
+
     })
   }
 
