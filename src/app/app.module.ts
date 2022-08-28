@@ -14,10 +14,15 @@ import { TicketformComponent } from './ticketform/ticketform.component';
 import {FormsModule} from "@angular/forms";
 import { CustomerformComponent } from './customerform/customerform.component';
 import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home-component', pathMatch: 'full' },
+  { path: 'home-component', component: HomeComponent },
+  { path: 'notfound-component', component: NotfoundComponent},
   { path: 'customer-component', component: CustomerComponent },
   { path: 'ticket-component', component: TicketComponent },
   { path: 'consulting-component', component: ConsultingComponent},
@@ -36,7 +41,9 @@ const routes: Routes = [
     ContactComponent,
     AboutComponent,
     TicketformComponent,
-    CustomerformComponent
+    CustomerformComponent,
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
