@@ -17,7 +17,7 @@ export class TicketformComponent implements OnInit {
 
   model = new Ticket('','', '');
   confirm = false;
-  submitted: boolean | undefined;
+  submitted: boolean = false;
 
   onSubmit() {
     this.confirm = true
