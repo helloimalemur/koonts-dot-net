@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ticket } from '../ticket/ticket';
+import { TicketService } from "../ticket.service";
+
 
 @Component({
   selector: 'app-ticketform',
@@ -8,7 +10,7 @@ import { Ticket } from '../ticket/ticket';
 })
 export class TicketformComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ticketservice: TicketService) { }
 
   type = ['Mac', 'Windows',
     'Linux', 'Chrome OS'];
@@ -16,7 +18,11 @@ export class TicketformComponent implements OnInit {
   model = new Ticket('', '', '');
   submitted = false;
 
-  onSubmit() {this.submitted = true};
+  onSubmit() {
+    this.submitted = true
+    this.ticketservice.createTicket(this.model);
+
+  };
   clearForm() {
     this.model.email = '';
     this.model.summary = '';
