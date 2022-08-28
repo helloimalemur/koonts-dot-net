@@ -1,0 +1,18 @@
+a {
+  color: #bdc984;
+}
+a:link{
+  text-decoration: none;
+}
+
+a:visited {
+
+}
+/* Add a heart before links */
+a::before {
+}
+
+a:hover {
+  color: darkred;
+  color: #d8fc9e;
+}
