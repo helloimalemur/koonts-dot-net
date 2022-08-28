@@ -1,15 +1,51 @@
 <p>ticketform works!</p>
+<div [hidden]="submitted">
 <form #ticketForm = "ngForm">
+{{model | json}}<br><br>
 
-<input type="text" class="form-control" id="email"
+  <h4>Email: {{model.email}}</h4>
+  <div class="form-group">
+    <input type="text" class="form-control" id="email"
        required
        [(ngModel)]="model.email" name="email">
-<br> Email: {{model.email}}
+  </div>
 
-<div class="form-group">
-  <label for="type">Type</label>
-  <select class="form-control" id="type" required>
-    <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
-  </select>
-</div>
+  <h4>Summary</h4>
+  <div class="form-group">
+    <input type="text" class="form-control" id="summary"
+           required
+           [(ngModel)]="model.summary" name="summary">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="type">Type </label>
+    <select class="form-control" id="type" required [(ngModel)]="model.type" name="type">
+      <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
+    </select>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary" (click)="submitted=true">Continue</button>
+  <button (click)="clearForm()">Clear</button>
 </form>
+</div>
+
+
+<div [hidden]="!submitted">
+  <h2>To Be Submitted:</h2>
+  <div class="row">
+    <div class="col-xs-3">Email:</div>
+    <div class="col-xs-9">{{ model.email }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Summary:</div>
+    <div class="col-xs-9">{{ model.summary }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Type:</div>
+    <div class="col-xs-9">{{ model.type }}</div>
+  </div>
+  <br>
+  <form (ngSubmit)="onSubmit()" #ticketForm="ngForm"><button>Submit</button></form>
+  <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div>
+

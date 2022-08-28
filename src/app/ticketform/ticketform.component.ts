@@ -13,10 +13,15 @@ export class TicketformComponent implements OnInit {
   type = ['Mac', 'Windows',
     'Linux', 'Chrome OS'];
 
-  model = new Ticket('test@gmail.com', 'test summary', 'mac');
+  model = new Ticket('', '', '');
   submitted = false;
 
   onSubmit() {this.submitted = true};
+  clearForm() {
+    this.model.email = '';
+    this.model.summary = '';
+    this.model.type = '';
+  }
 
   ngOnInit(): void {
   }
