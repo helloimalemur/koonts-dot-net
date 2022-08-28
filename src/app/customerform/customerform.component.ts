@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerformComponent implements OnInit {
 
-  constructor() { }
+  model = new Customer('','', '');
+  confirm = false;
+  submitted: boolean = false;
+
+  onSubmit() {
+    this.confirm = true
+    let req = this.ticketservice.createCustomer(this.model);
+    req.subscribe();
+
+  };
+  clearForm() {
+    this.model.email = '';
+    this.model.name = '';
+    this.model.phone = '';
+  }
 
   ngOnInit(): void {
   }
