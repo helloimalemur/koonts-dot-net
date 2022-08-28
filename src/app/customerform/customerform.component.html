@@ -1,1 +1,50 @@
-<p>customerform works!</p>
+<div [hidden]="confirm">
+  <form #customerForm = "ngForm">
+
+    <h4>Name: {{model.name}}</h4>
+    <div class="form-group">
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="model.name" name="name">
+    </div>
+
+    <h4>Email</h4>
+    <div class="form-group">
+      <input type="text" class="form-control" id="email"
+             required maxlength="300" minlength="10"
+             [(ngModel)]="model.email" name="email">
+    </div>
+    <br>
+    <div class="form-group">
+      <h4>Phone</h4>
+      <input type="text" class="form-control" id="phone"
+             required maxlength="15" minlength="10"
+             [(ngModel)]="model.phone" name="phone">
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="confirm=true">Continue</button>
+    <button (click)="clearForm()">Clear</button>
+  </form>
+</div>
+
+
+<div [hidden]="!confirm">
+  <h2>To Be Submitted:</h2>
+  <div class="row">
+    <div class="col-xs-3">Name:</div>
+    <div class="col-xs-9">{{ model.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Email:</div>
+    <div class="col-xs-9">{{ model.email }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Phone:</div>
+    <div class="col-xs-9">{{ model.phone }}</div>
+  </div>
+  <br>
+  <form (ngSubmit)="onSubmit();submitted=true" #ticketForm="ngForm"><button>Submit</button></form>
+  <button type="button" class="btn btn-primary" (click)="confirm=false">Edit</button>
+  <div [hidden]="!submitted"><b><h2>Submitted!</h2></b></div>
+</div>
+

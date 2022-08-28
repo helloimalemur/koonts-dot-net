@@ -7,6 +7,7 @@ import {ConsultingComponent} from "./consulting/consulting.component";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutComponent} from "./about/about.component";
 import {TicketformComponent} from "./ticketform/ticketform.component";
+import {CustomerformComponent} from "./customerform/customerform.component";
 import {HomeComponent} from "./home/home.component";
 import {PortfolioComponent} from "./portfolio/portfolio.component";
 
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
+  {path: 'ticketform', component: TicketformComponent},
+  {path: 'customerform', component: CustomerformComponent},
   { path: '**', redirectTo: 'notfound' }
 ];
 

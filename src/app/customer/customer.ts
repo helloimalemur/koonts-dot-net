@@ -1,6 +1,7 @@
-export interface Customer {
-  id: number;
-  name: String;
-  email: String;
-
+export class Customer {
+  constructor(
+    public name: String,
+    public email: String,
+    public phone: String
+    ) { }
 }

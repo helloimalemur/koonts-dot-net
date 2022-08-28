@@ -8,12 +8,6 @@ import { Customer } from "./customer";
 })
 export class CustomerComponent implements OnInit {
 
-  customer: Customer = {
-    id: 1,
-    name: "James",
-    email: "jkoontsiii@gmail.com"
-  };
-
   constructor() { }
 
   ngOnInit(): void {
