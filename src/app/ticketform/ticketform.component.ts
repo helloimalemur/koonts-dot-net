@@ -15,7 +15,7 @@ export class TicketformComponent implements OnInit {
   type = ['Mac', 'Windows',
     'Linux', 'Chrome OS'];
 
-  model = new Ticket('', '', '');
+  model = new Ticket('','', '');
   submitted = false;
 
   onSubmit() {

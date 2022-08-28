@@ -17,10 +17,10 @@ export class TicketService {
   url="http://localhost:8000/";
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':'application/x-www-form-urlencoded',
-
+      'Content-Type':'application/x-www-form-urlencoded'
     })
   }
+
 
 
   createTicket(ticket:Ticket): Observable<any> {
