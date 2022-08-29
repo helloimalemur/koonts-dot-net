@@ -1,6 +1,21 @@
 .fees {
   color: #bfe5ff;
 }
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-left-40 {
+  margin-left: 40px;
+}
+.margin-left-60 {
+  margin-left: 60px;
+}
+.arrange-horizontal > * {
+  display: inline-block;
+}
+
 b {
 
 }
@@ -26,6 +41,4 @@ h5 {
   line-height: 4px;
   margin: 16px;
 }
-.arrange-horizontal > * {
-  display: inline-block;
-}
+
