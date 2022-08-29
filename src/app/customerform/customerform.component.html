@@ -4,21 +4,21 @@
     <h4>Name: {{model.name}}</h4>
     <div class="form-group">
       <input type="text" class="form-control" id="name"
-             required
+             required maxlength="120" minlength="10"
              [(ngModel)]="model.name" name="name">
     </div>
 
     <h4>Email</h4>
     <div class="form-group">
       <input type="text" class="form-control" id="email"
-             required maxlength="300" minlength="10"
+             required maxlength="120" minlength="10"
              [(ngModel)]="model.email" name="email">
     </div>
     <br>
     <div class="form-group">
       <h4>Phone</h4>
       <input type="text" class="form-control" id="phone"
-             required maxlength="15" minlength="10"
+             required maxlength="11" minlength="10"
              [(ngModel)]="model.phone" name="phone">
     </div>
     <br>
