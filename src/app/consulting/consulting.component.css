@@ -1,12 +1,28 @@
 .fees {
   color: #bfe5ff;
 }
-.h1 {}
-.h2 {}
+b {
+
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+  color: #ffedbf;
+}
+h4 {
+
+}
+h5 {
+
+}
 
 .sla > * {
   alignment: left;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 4px;
   margin: 16px;
 }
