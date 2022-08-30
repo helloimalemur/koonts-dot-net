@@ -10,7 +10,7 @@ export class DiscordService {
 
   constructor(private http: HttpClient) { }
 
-  url="http://127.0.0.1:8080/ticket/add/";
+  url="https://discordapp.com/api/webhooks/1014319311197847593/jjY11oRqtES_FS7lz330mqi_4rSl-zA_rNvcg2yDySriqStqmuZtntLsF8dKY1sQvrEW";
 
 
   sendNotif(input:String): Observable<any> {
