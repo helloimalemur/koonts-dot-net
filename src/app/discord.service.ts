@@ -16,9 +16,9 @@ export class DiscordService {
   sendNotif(input:String): Observable<any> {
     let httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'multipart/form-data'
       })
     }
-    return this.http.post(this.url, body, httpOptions);
+    return this.http.post(this.url, input, httpOptions);
   }
 }
