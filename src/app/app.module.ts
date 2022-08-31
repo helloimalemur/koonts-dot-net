@@ -16,6 +16,7 @@ import { CustomerformComponent } from './customerform/customerform.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { DiscordnotifComponent } from './discordnotif/discordnotif.component';
 
 
 
@@ -34,6 +35,7 @@ const routes: Routes = [];
     CustomerformComponent,
     HomeComponent,
     NotfoundComponent,
+    DiscordnotifComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Ticket} from "./ticket/ticket";
 import {Observable} from "rxjs";
+import {notif} from "./discordnotif/notif";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class DiscordService {
   sendNotif(input:String): Observable<any> {
     let httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'multipart/form-data'
+        'Content-Type': 'application/json'
       })
     }
     return this.http.post(this.url, input, httpOptions);
