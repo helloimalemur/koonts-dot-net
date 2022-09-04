@@ -1,3 +1,46 @@
+.sla > * {
+  alignment: left;
+  font-size: 16px;
+  line-height: 4px;
+  margin: 16px;
+}
+
+.head > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.center-me > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-me > * {
+  display: flex;
+  justify-content: center;
+  position: center;
+  font-size: 18px;
+  line-height: 4px;
+  margin: 16px 16px 16px 16px;
+  color: #ffedbf;
+}
+
+a {
+  color: #a18744;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+
+}
+
 .fees {
   color: #bfe5ff;
 }
@@ -5,13 +48,13 @@
 .margin-left-20 {
   margin-left: 20px;
 }
-
 .margin-left-40 {
   margin-left: 40px;
 }
 .margin-left-60 {
   margin-left: 60px;
 }
+
 .arrange-horizontal > * {
   display: inline-block;
 }
@@ -21,6 +64,7 @@ b {
 }
 h1 {
 
+  margin: 2px 2px 2px 2px;
 }
 h2 {
 
@@ -35,10 +79,5 @@ h5 {
 
 }
 
-.sla > * {
-  alignment: left;
-  font-size: 16px;
-  line-height: 4px;
-  margin: 16px;
-}
+
 
