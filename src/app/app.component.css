@@ -175,6 +175,16 @@ a:hover {
   color: #d8fc9e;
 }
 
+.head > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 48px;
+  line-height: 30px;
+  color: #fddb80;
+}
+
 .circle-link {
   height: 40px;
   width: 40px;

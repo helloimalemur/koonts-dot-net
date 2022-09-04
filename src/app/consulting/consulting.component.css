@@ -4,14 +4,31 @@
   line-height: 4px;
   margin: 16px;
 }
+.small-card {
+  all: unset;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  background-color: rgba(122, 117, 133, 0.32);
+  height: 20px;
+  width: 100px;
+  margin: 0 8px 16px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+}
 
 .head > * {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 30px;
+  color: #5ca9a9;
 }
 
 .center-me > * {
@@ -22,9 +39,6 @@
 }
 
 .contact-me > * {
-  display: flex;
-  justify-content: center;
-  position: center;
   font-size: 18px;
   line-height: 4px;
   margin: 16px 16px 16px 16px;
