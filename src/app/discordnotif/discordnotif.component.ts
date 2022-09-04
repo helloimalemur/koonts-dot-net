@@ -8,13 +8,15 @@ import { notif } from "./notif";
   styleUrls: ['./discordnotif.component.css']
 })
 export class DiscordnotifComponent implements OnInit {
+  private static discordservice: DiscordService;
 
   constructor(private discordservice: DiscordService) {
 
   }
 
-  public sendMessage() {
-    let json = JSON.stringify("message");
+  public static sendMessage(string:string) {
+    let n = new notif(string);
+    let json = JSON.stringify(n);
     let req = this.discordservice.sendNotif(json);
     req.subscribe();
   }
