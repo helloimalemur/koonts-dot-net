@@ -9,7 +9,7 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-ticketform',
   templateUrl: './ticketform.component.html',
-  styleUrls: ['./ticketform.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class TicketformComponent implements OnInit {
 

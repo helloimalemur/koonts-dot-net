@@ -1,35 +1,33 @@
+
+
 <div [hidden]="confirm">
 <form #ticketForm = "ngForm">
 
-  <h4>Email: {{model.email}}</h4>
   <div class="form-group">
-    <input type="text" class="form-control" id="email"
-       required
-       [(ngModel)]="model.email" name="email">
-  </div>
-
-  <h4>Summary</h4>
-  <div class="form-group">
-    <input type="text" class="form-control" id="summary"
+    <input type="text" class="fx-input fx-border form-control" id="summary" placeholder="Name"
            required maxlength="300" minlength="10"
            [(ngModel)]="model.summary" name="summary">
   </div>
   <br>
   <div class="form-group">
-    <label for="type">Type </label>
-    <select class="form-control" id="type" required [(ngModel)]="model.type" name="type">
-      <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
-    </select>
+    <input type="text" class="fx-input fx-border form-control" id="email" placeholder="Email"
+       required
+       [(ngModel)]="model.email" name="email">
   </div>
   <br>
-  <button type="button" class="btn btn-primary" (click)="confirm=true">Continue</button>
-  <button (click)="clearForm()">Clear</button>
+  <div class="form-group">
+    <input type="text" class="fx-input fx-border form-control" id="message" placeholder="Message"
+           required maxlength="300" minlength="10"
+           [(ngModel)]="model.summary" name="summary">
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary fx-button fx-black fx-right fx-section" (click)="confirm=true">Continue</button>
+  <button class="fx-button fx-black fx-right fx-section" (click)="clearForm()">Clear</button>
 </form>
 </div>
 
-
 <div [hidden]="!confirm">
-  <h2>To Be Submitted:</h2>
+  <h2>To Be Sent:</h2>
   <div class="row">
     <div class="col-xs-3">Email:</div>
     <div class="col-xs-9">{{ model.email }}</div>
@@ -43,8 +41,8 @@
     <div class="col-xs-9">{{ model.type }}</div>
   </div>
   <br>
-  <form (ngSubmit)="onSubmit();submitted=true" #ticketForm="ngForm"><button>Submit</button></form>
-  <button type="button" class="btn btn-primary" (click)="confirm=false">Edit</button>
+  <form (ngSubmit)="onSubmit();submitted=true" #ticketForm="ngForm"><button class="btn btn-primary fx-button fx-black fx-right fx-section">Submit</button></form>
+  <button type="button" class="btn btn-primary fx-button fx-black fx-right fx-section" (click)="confirm=false">Edit</button>
   <div [hidden]="!submitted"><b><h2>Submitted!</h2></b></div>
 </div>
 
