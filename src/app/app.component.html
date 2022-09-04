@@ -1,55 +1,257 @@
-<title>Network Ninja</title>
-<body class="mat-app-background">
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Koonts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.component.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div class="center"><span><a routerLink="/">Home</a></span></div>
 
-    <div class="spacer"></div>
 
-    <a aria-label="Koonts on twitter" target="_blank" rel="noopener" href="https://twitter.com/helloimalemur" title="Twitter">
-      <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-        <rect width="400" height="400" fill="none"/>
-        <path d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23" fill="#fff"/>
-      </svg>
+</head>
+
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="fx-top">
+  <div class="fx-bar" id="myNavbar">
+    <a class="fx-bar-item fx-button fx-hover-black fx-hide-medium fx-hide-large fx-right" href="javascript:void(0);" (click)="toggleminibar()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
     </a>
-
-    <a aria-label="Koonts on YouTube" target="_blank" rel="noopener" href="https://youtube.com/helloimalemur" title="YouTube">
-      <svg id="youtube-logo" height="24" width="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
-        <path d="M0 0h24v24H0V0z" fill="none"/>
-        <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/>
-      </svg>
-    </a>
-</div>
-
-
-<div class="content" role="main">
-  <div class="head"><h2 class="title">James Koonts</h2></div>
-  <div class="card-container">
-    <!-- Button -->
-    <a routerLink="/consulting" routerLinkActive="active" ariaCurrentWhenActive="page" class="card" rel="noopener">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-      <span>Consulting</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-    <!-- Button -->
-    <a routerLink="/customer" routerLinkActive="active" ariaCurrentWhenActive="page" class="card" rel="noopener">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-      <span>Customers</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-    <!-- Button -->
-    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" class="card" rel="noopener">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-      <span>Contact</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-    <!-- Button -->
-    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page" class="card" rel="noopener">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-      <span>About</span>
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-
+    <a href="#home" class="fx-bar-item fx-button">HOME </a>
+    <a href="#about" class="fx-bar-item fx-button fx-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="fx-bar-item fx-button fx-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="fx-bar-item fx-button fx-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
 
   </div>
 
-<router-outlet></router-outlet>
+  <!-- Navbar on small screens -->
+  <div *ngIf="showminibar" id="navDemo" class="fx-show fx-bar-block fx-white fx-hide fx-hide-large fx-hide-medium">
+    <a href="#about" class="fx-bar-item fx-button" (click)="toggleminibar()">ABOUT</a>
+    <a href="#portfolio" class="fx-bar-item fx-button" (click)="toggleminibar()">PORTFOLIO</a>
+    <a href="#contact" class="fx-bar-item fx-button" (click)="toggleminibar()">CONTACT</a>
+  </div>
 </div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 fx-display-container fx-opacity-min" id="home">
+  <div class="fx-display-middle" style="white-space:nowrap;">
+    <span class="fx-center fx-padding-large fx-black fx-xlarge fx-wide fx-animate-opacity">James <span class="fx-hide-small">F</span> Koonts</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="fx-content fx-container fx-padding-64" id="about">
+  <h3 class="fx-center">ABOUT ME</h3>
+  <p class="fx-center"><em>I love hacking</em></p>
+  <p>XIV</p>
+  <div class="fx-row">
+    <div class="fx-col m6 fx-center fx-padding-large">
+      <p><b><i class="fa fa-user fx-margin-right"></i>James</b></p><br>
+      <img src="/fximages/avatar_hat.jpg" class="fx-round fx-image fx-opacity fx-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="fx-col m6 fx-hide-small fx-padding-large">
+      <p>XIZ</p>
+    </div>
+  </div>
+  <p class="fx-large fx-center fx-padding-16">Im really good at:</p>
+  <p class="fx-wide"><i class="fa fa-hashtag"></i>Hacking</p>
+  <div class="fx-light-grey">
+    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:80%">85%</div>
+  </div>
+  <p class="fx-wide"><i class="fa fa-code"></i>Web Design</p>
+  <div class="fx-light-grey">
+    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:85%">70%</div>
+  </div>
+  <p class="fx-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="fx-light-grey">
+    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
+  </div>
+  <p class="fx-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="fx-light-grey">
+    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
+  </div>
+  <p class="fx-wide"><i class="fa fa-motorcycle"></i>Motocycles</p>
+  <div class="fx-light-grey">
+    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
+  </div>
+</div>
+
+
+
+<!--
+<div class="fx-row fx-center fx-dark-grey fx-padding-16">
+  <div class="fx-quarter fx-section">
+    <span class="fx-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="fx-quarter fx-section">
+    <span class="fx-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="fx-quarter fx-section">
+    <span class="fx-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="fx-quarter fx-section">
+    <span class="fx-xlarge">150+</span><br>
+    Meetings
+  </div>
+</div>
+-->
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 fx-display-container fx-opacity-min">
+  <div class="fx-display-middle">
+    <span class="fx-xxlarge fx-text-white fx-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="fx-content fx-container fx-padding-64" id="portfolio">
+  <h3 class="fx-center">MY WORK</h3>
+  <p class="fx-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="fx-row-padding fx-center">
+    <div class="fx-col m3">
+      <img src="/fximages/p1.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="more to come">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p2.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p3.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p4.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+  </div>
+
+  <div class="fx-row-padding fx-center fx-section">
+    <div class="fx-col m3">
+      <img src="/fximages/p5.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p6.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p7.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+
+    <div class="fx-col m3">
+      <img src="/fximages/p8.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+    </div>
+    <button class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="fx-modal fx-black" onclick="this.style.display='none'">
+  <span class="fx-button fx-large fx-black fx-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="fx-modal-content fx-animate-zoom fx-center fx-transparent fx-padding-64">
+    <img id="img01" class="fx-image">
+    <p id="caption" class="fx-opacity fx-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 fx-display-container fx-opacity-min">
+  <div class="fx-display-middle">
+    <span class="fx-xxlarge fx-text-white fx-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="fx-content fx-container fx-padding-64" id="contact">
+  <h3 class="fx-center">Contact Me</h3>
+  <p class="fx-center"><em>I'd love your feedback!</em></p>
+
+  <div class="fx-row fx-padding-32 fx-section">
+    <div class="fx-col m4 fx-container">
+      <img src="/fximages/map.jpg" class="fx-image fx-round" style="width:100%">
+    </div>
+    <div class="fx-col m8 fx-panel">
+      <div class="fx-large fx-margin-bottom">
+        <i class="fa fa-map-marker fa-fw fx-hover-text-black fx-xlarge fx-margin-right"></i> Atlanta, GA, USA<br>
+        <i class="fa fa-phone fa-fw fx-hover-text-black fx-xlarge fx-margin-right"></i> Phone: by request<br>
+        <i class="fa fa-envelope fa-fw fx-hover-text-black fx-xlarge fx-margin-right"></i> Email: James@Koonts.net<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="fx-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="fx-half">
+            <input class="fx-input fx-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="fx-half">
+            <input class="fx-input fx-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="fx-input fx-border" type="text" placeholder="Message" required name="Message">
+        <button class="fx-button fx-black fx-right fx-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="fx-center fx-black fx-padding-64 fx-opacity fx-hover-opacity-off">
+  <a href="#home" class="fx-button fx-light-grey"><i class="fa fa-arrow-up fx-margin-right"></i>To the top</a>
+  <div class="fx-xlarge fx-section">
+    <i class="fa fa-facebook-official fx-hover-opacity"></i>
+    <i class="fa fa-instagram fx-hover-opacity"></i>
+    <i class="fa fa-snapchat fx-hover-opacity"></i>
+    <i class="fa fa-pinterest-p fx-hover-opacity"></i>
+    <i class="fa fa-twitter fx-hover-opacity"></i>
+    <i class="fa fa-linkedin fx-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="http://koonts.net" title="caffiene" target="_blank" class="fx-hover-text-green">caffiene</a></p>
+</footer>
+
+<script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      navbar.className = "fx-bar" + " fx-card" + " fx-animate-top" + " fx-white";
+    } else {
+      navbar.className = navbar.className.replace(" fx-card fx-animate-top fx-white", "");
+    }
+  }
+
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("fx-show") == -1) {
+      x.className += " fx-show";
+    } else {
+      x.className = x.className.replace(" fx-show", "");
+    }
+  }
+</script>
+
 </body>
+

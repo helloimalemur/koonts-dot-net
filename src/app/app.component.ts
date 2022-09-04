@@ -13,9 +13,19 @@ import {OverlayContainer} from "@angular/cdk/overlay";
 })
 export class AppComponent {
   title = 'Koonts Consulting';
-  //themeClass: String;
+  public showminibar:boolean = false;
 
   constructor(
     //private overlayContainer:OverlayContainer
   ) {}
+
+  toggleminibar() {
+    if(this.showminibar)
+      this.showminibar = false
+    if(!this.showminibar)
+      this.showminibar = true;
+  }
+
+
+
 }
