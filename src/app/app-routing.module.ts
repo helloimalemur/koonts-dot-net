@@ -12,7 +12,11 @@ import {HomeComponent} from "./home/home.component";
 import {PortfolioComponent} from "./portfolio/portfolio.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '#home' },
+  { path: '#about' },
+  { path: '#portfolio' },
+  { path: '#contact' },
   { path: 'home', component: HomeComponent },
   { path: 'notfound', component: NotfoundComponent},
   { path: 'customer', component: CustomerComponent },
@@ -23,7 +27,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'ticketform', component: TicketformComponent},
   {path: 'customerform', component: CustomerformComponent},
-  { path: '**', redirectTo: 'notfound' }
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
