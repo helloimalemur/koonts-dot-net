@@ -31,12 +31,13 @@ export class AppComponent {
 
   viewPortfolio() {
     if(!this.portfolio) {
-      this.portfolio = false;
+      this.portfolio = true;
+
     }
   }
   closePortfolio() {
     if(this.portfolio) {
-      this.portfolio = true;
+      this.portfolio = false;
     }
   }
 

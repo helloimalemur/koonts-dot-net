@@ -123,7 +123,7 @@
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
 
-  <div class="fx-row-padding fx-center" *ngIf="(portfolio)">
+  <div class="fx-row-padding fx-center" *ngIf="portfolio">
 
     <div class="fx-col m3">
       <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
@@ -161,20 +161,13 @@
     </div>
 
   </div>
-  <div *ngIf="!(portfolio)"><button (click)="viewPortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button></div>
-  <div *ngIf="(portfolio)"><button (click)="closePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">CLOSE</button></div>
+  <div *ngIf="!portfolio"><button (click)="viewPortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button></div>
+  <div *ngIf="portfolio"><button (click)="closePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">CLOSE</button></div>
 
   <br>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="fx-modal fx-black" onclick="this.style.display='none'">
-  <span class="fx-button fx-large fx-black fx-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="fx-modal-content fx-animate-zoom fx-center fx-transparent fx-padding-64">
-    <img id="img01" class="fx-image">
-    <p id="caption" class="fx-opacity fx-large"></p>
-  </div>
-</div>
+
 
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-4 fx-display-container fx-opacity-min">
