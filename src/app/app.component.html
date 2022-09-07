@@ -20,7 +20,7 @@
 <!-- Navbar (sit on top) -->
 <div class="fx-top">
   <div class="fx-bar" id="myNavbar">
-    <a class="fx-bar-item fx-button fx-hover-black fx-hide-medium fx-hide-large fx-right" href="javascript:void(0);" (click)="toggleMiniBar()" title="Toggle Navigation Menu">
+    <a class="fx-bar-item fx-button fx-hover-black fx-hide-medium fx-hide-large fx-right" href="javascript:void(0);" (click)="viewMiniBar()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="fx-bar-item fx-button">HOME </a>
@@ -32,9 +32,9 @@
 
   <!-- Navbar on small screens -->
   <div *ngIf="minibar" id="navDemo" class="fx-show fx-bar-block fx-white fx-hide fx-hide-large fx-hide-medium">
-    <a href="#about" class="fx-bar-item fx-button" (click)="toggleMiniBar()">ABOUT</a>
-    <a href="#portfolio" class="fx-bar-item fx-button" (click)="toggleMiniBar()">PORTFOLIO</a>
-    <a href="#contact" class="fx-bar-item fx-button" (click)="toggleMiniBar()">CONTACT</a>
+    <a href="#about" class="fx-bar-item fx-button" (click)="closeMiniBar()">ABOUT</a>
+    <a href="#portfolio" class="fx-bar-item fx-button" (click)="closeMiniBar()">PORTFOLIO</a>
+    <a href="#contact" class="fx-bar-item fx-button" (click)="closeMiniBar()">CONTACT</a>
   </div>
 </div>
 
@@ -123,45 +123,47 @@
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
 
-  <div class="fx-row-padding fx-center" *ngIf="portfolio">
+  <div class="fx-row-padding fx-center" *ngIf="(portfolio)">
 
     <div class="fx-col m3">
-      <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p3.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p3.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p4.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p4.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p5.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p5.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p6.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p6.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p7.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p7.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
     <div class="fx-col m3">
-      <img src="/fximages/p8.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
+      <img src="/fximages/p8.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
       asdf
     </div>
 
   </div>
-  <button (click)="togglePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button>
+  <div *ngIf="!(portfolio)"><button (click)="viewPortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button></div>
+  <div *ngIf="(portfolio)"><button (click)="closePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">CLOSE</button></div>
+
   <br>
 </div>
 
