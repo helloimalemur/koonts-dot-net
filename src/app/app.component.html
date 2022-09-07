@@ -31,7 +31,7 @@
   </div>
 
   <!-- Navbar on small screens -->
-  <div *ngIf="showminibar" id="navDemo" class="fx-show fx-bar-block fx-white fx-hide fx-hide-large fx-hide-medium">
+  <div *ngIf="minibar" id="navDemo" class="fx-show fx-bar-block fx-white fx-hide fx-hide-large fx-hide-medium">
     <a href="#about" class="fx-bar-item fx-button" (click)="toggleMiniBar()">ABOUT</a>
     <a href="#portfolio" class="fx-bar-item fx-button" (click)="toggleMiniBar()">PORTFOLIO</a>
     <a href="#contact" class="fx-bar-item fx-button" (click)="toggleMiniBar()">CONTACT</a>
@@ -123,7 +123,7 @@
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
 
-  <div class="fx-row-padding fx-center" *ngIf="showportfolio">
+  <div class="fx-row-padding fx-center" *ngIf="portfolio">
 
     <div class="fx-col m3">
       <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick(this)" class="fx-hover-opacity" alt="">
@@ -216,37 +216,6 @@
   </div>
   <p>Powered by <a href="http://koonts.net" title="caffiene" target="_blank" class="fx-hover-text-green">caffiene</a></p>
 </footer>
-
-<script>
-  // Modal Image Gallery
-  function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-
-  // Change style of navbar on scroll
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      navbar.className = "fx-bar" + " fx-card" + " fx-animate-top" + " fx-white";
-    } else {
-      navbar.className = navbar.className.replace(" fx-card fx-animate-top fx-white", "");
-    }
-  }
-
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("fx-show") == -1) {
-      x.className += " fx-show";
-    } else {
-      x.className = x.className.replace(" fx-show", "");
-    }
-  }
-</script>
 
 </body>
 
