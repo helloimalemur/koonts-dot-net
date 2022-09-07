@@ -9,7 +9,7 @@ import {CommonModule} from "@angular/common";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Koonts Consulting';
+  title = 'James Koonts';
   public minibar:boolean = false;
   public portfolio:boolean = false;
 
