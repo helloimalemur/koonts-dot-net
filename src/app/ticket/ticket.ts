@@ -1,7 +1,7 @@
 export class Ticket {
   constructor(
+    public name: string,
     public email: string,
-    public summary: string,
-    public type: string
+    public message: string,
 ) {  }
 }

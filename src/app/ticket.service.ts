@@ -22,10 +22,7 @@ export class TicketService {
         'Content-Type': 'application/x-www-form-urlencoded'
       })
     }
-    let email = ticket.email;
-    let summary = ticket.summary;
-    let type = ticket.type;
-    let body = "email="+email+"&"+"summary="+summary+"&"+"type="+type;
+    let body = "name="+ticket.name+"&"+"email="+ticket.email+"&"+"message="+ticket.message;
     return this.http.post(this.url, body, httpOptions);
   }
 }

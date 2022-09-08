@@ -17,9 +17,6 @@ export class TicketformComponent implements OnInit {
 
   }
 
-  type = ['Mac', 'Windows',
-    'Linux', 'Chrome OS'];
-
   model = new Ticket('','', '');
   confirm = false;
   submitted: boolean = false;
@@ -34,9 +31,9 @@ export class TicketformComponent implements OnInit {
 
   }
   clearForm() {
+    this.model.name = '';
     this.model.email = '';
-    this.model.summary = '';
-    this.model.type = '';
+    this.model.message = '';
 
   }
 
