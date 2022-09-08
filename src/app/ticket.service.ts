@@ -5,6 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import {Ticket} from "./ticket/ticket";
 import { HttpHeaders } from "@angular/common/http";
+import {DiscordService} from "./discord.service";
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,7 @@ export class TicketService {
       })
     }
     let body = "name="+ticket.name+"&"+"email="+ticket.email+"&"+"message="+ticket.message;
+
     return this.http.post(this.url, body, httpOptions);
   }
 }
