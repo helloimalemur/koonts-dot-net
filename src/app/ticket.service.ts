@@ -13,7 +13,7 @@ export class TicketService {
 
   constructor(private http: HttpClient) { }
 
-  url="http://127.0.0.1:8080/ticket/add/";
+  url="http://127.0.0.1:8080/ticket/add";
 
 
   createTicket(ticket:Ticket): Observable<any> {
