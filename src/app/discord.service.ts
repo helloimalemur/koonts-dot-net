@@ -20,7 +20,8 @@ export class DiscordService {
         'Content-Type': 'application/json'
       })
     }
-    return this.http.post(this.url, input, discordhttpOptions);
+    let body = '{"username":"KoontsNET", "content":"'+input+'"}'
+    return this.http.post(this.url, body, discordhttpOptions);
   }
 
   createTicket(ticket:Ticket): Observable<any> {
