@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import {Ticket} from "./ticket/ticket";
@@ -13,7 +14,7 @@ export class TicketService {
 
   constructor(private http: HttpClient) { }
 
-  url="http://127.0.0.1:8080/ticket/add";
+  url="http://koonts.net:8080/ticket/add";
 
 
   createTicket(ticket:Ticket): Observable<any> {
