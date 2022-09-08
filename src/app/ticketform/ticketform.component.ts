@@ -24,7 +24,7 @@ export class TicketformComponent implements OnInit {
 
   onSubmit() {
     this.confirm = true
-    let reqq = this.discordservice.sendNotif("Name: "+this.model.name+"Message: "+this.model.message+"Email: "+this.model.email);
+    let reqq = this.discordservice.sendNotif("Name: "+this.model.name+" - Message: "+this.model.message+" - Email: "+this.model.email);
     reqq.subscribe();
     let req = this.ticketservice.createTicket(this.model);
     req.subscribe();
