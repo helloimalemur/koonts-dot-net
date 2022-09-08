@@ -13,7 +13,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class TicketformComponent implements OnInit {
 
-  constructor(private ticketservice: TicketService) {
+  constructor(private ticketservice: TicketService, private discordservice: DiscordService) {
 
   }
 
@@ -24,8 +24,11 @@ export class TicketformComponent implements OnInit {
 
   onSubmit() {
     this.confirm = true
+    let reqq = this.discordservice.sendNotif(this.model.name);
+    reqq.subscribe();
     let req = this.ticketservice.createTicket(this.model);
     req.subscribe();
+
 
 
   }

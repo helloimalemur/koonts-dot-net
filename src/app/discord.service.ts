@@ -12,14 +12,26 @@ export class DiscordService {
   constructor(private http: HttpClient) { }
 
   url="https://discordapp.com/api/webhooks/1014319311197847593/jjY11oRqtES_FS7lz330mqi_4rSl-zA_rNvcg2yDySriqStqmuZtntLsF8dKY1sQvrEW";
+  #url="http://127.0.0.1:8080";
 
-
-  sendNotif(input:String): Observable<any> {
-    let httpOptions = {
+  public sendNotif(input:String): Observable<any> {
+    let discordhttpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-    return this.http.post(this.url, input, httpOptions);
+    return this.http.post(this.url, input, discordhttpOptions);
   }
+
+  createTicket(ticket:Ticket): Observable<any> {
+    let ds = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    }
+    let body = "name="+ticket.name+"&"+"email="+ticket.email+"&"+"message="+ticket.message;
+
+    return this.http.post(this.url, body, ds);
+  }
+
 }
