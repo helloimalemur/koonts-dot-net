@@ -19,7 +19,6 @@ export class TicketService {
   createTicket(ticket:Ticket): Observable<any> {
     let httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded'
       })
     }
     let body = "name="+ticket.name+"&"+"email="+ticket.email+"&"+"message="+ticket.message;
