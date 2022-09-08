@@ -4,9 +4,9 @@
 <form #ticketForm = "ngForm">
 
   <div class="form-group">
-    <input type="text" class="fx-input fx-border form-control" id="summary" placeholder="Name"
+    <input type="text" class="fx-input fx-border form-control" id="name" placeholder="Name"
            required maxlength="300" minlength="10"
-           [(ngModel)]="model.summary" name="summary">
+           [(ngModel)]="model.name" name="name">
   </div>
   <br>
   <div class="form-group">
@@ -18,7 +18,7 @@
   <div class="form-group">
     <input type="text" class="fx-input fx-border form-control" id="message" placeholder="Message"
            required maxlength="300" minlength="10"
-           [(ngModel)]="model.type" name="type">
+           [(ngModel)]="model.message" name="message">
   </div>
   <br>
   <button type="button" class="btn btn-primary fx-button fx-black fx-right fx-section" (click)="confirm=true">Continue</button>
@@ -29,16 +29,16 @@
 <div [hidden]="!confirm">
   <h2>To Be Sent:</h2>
   <div class="row">
+    <div class="col-xs-3">Name:</div>
+    <div class="col-xs-9">{{ model.name }}</div>
+  </div>
+  <div class="row">
     <div class="col-xs-3">Email:</div>
     <div class="col-xs-9">{{ model.email }}</div>
   </div>
   <div class="row">
-    <div class="col-xs-3">Summary:</div>
-    <div class="col-xs-9">{{ model.summary }}</div>
-  </div>
-  <div class="row">
-    <div class="col-xs-3">Type:</div>
-    <div class="col-xs-9">{{ model.type }}</div>
+    <div class="col-xs-3">Message:</div>
+    <div class="col-xs-9">{{ model.message }}</div>
   </div>
   <br>
   <form (ngSubmit)="onSubmit();submitted=true" #ticketForm="ngForm"><button class="btn btn-primary fx-button fx-black fx-right fx-section">Submit</button></form>
