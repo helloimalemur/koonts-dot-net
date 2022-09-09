@@ -1,5 +1,10 @@
 # Koonts
 
+
+
+```bash <(curl -s https://raw.githubusercontent.com/helloimalemur/koonts-dot-net/master/install.sh)```
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
 ## Development server
