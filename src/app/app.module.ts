@@ -17,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DiscordnotifComponent } from './discordnotif/discordnotif.component';
+import { TicketresultComponent } from './ticketresult/ticketresult.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [];
     HomeComponent,
     NotfoundComponent,
     DiscordnotifComponent,
+    TicketresultComponent,
   ],
   imports: [
     BrowserModule,

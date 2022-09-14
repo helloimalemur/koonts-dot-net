@@ -10,10 +10,10 @@ import {TicketformComponent} from "./ticketform/ticketform.component";
 import {CustomerformComponent} from "./customerform/customerform.component";
 import {HomeComponent} from "./home/home.component";
 import {PortfolioComponent} from "./portfolio/portfolio.component";
+import {TicketresultComponent} from "./ticketresult/ticketresult.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '/ticket/all', redirectTo: '/ticket/all', pathMatch: 'full' },
   { path: '#home' },
   { path: '#about' },
   { path: '#portfolio' },
@@ -28,6 +28,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {path: 'ticketform', component: TicketformComponent},
   {path: 'customerform', component: CustomerformComponent},
+  {path: 'ticketresult', component: TicketresultComponent},
   { path: '**', redirectTo: '/' }
 ];
 

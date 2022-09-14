@@ -30,13 +30,9 @@ export class TicketService {
     return this.http.post(this.url, body, httpOptions);
   }
 
-  //sendNotif(input:String): Observable<any> {
-  //  let discordhttpOptions = {
-  //    headers: new HttpHeaders({
-  //      'Content-Type': 'application/json'
-  //    })
-  //  }
-  //  return this.http.post(this.discordurl, input, discordhttpOptions);
+  //getAll(): Observable<any> { //http request to localhost:8080/ticket/all
+  //  let tickets = ;
+  //  return tickets;
   //}
 
 }
