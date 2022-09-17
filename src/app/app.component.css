@@ -8,6 +8,10 @@ body, html {
   line-height: 1.8;
 }
 
+.resume {
+  padding: 30px;
+}
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
   background-attachment: fixed;
@@ -25,18 +29,18 @@ body, html {
 /* Second image (Portfolio) */
 .bgimg-2 {
   background-image: url("/assets/fox2.jpeg");
-  min-height: 400px;
+  min-height: 280px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
   background-image: url("/assets/fox3.jpeg");
-  min-height: 400px;
+  min-height: 250px;
 }
 
 .bgimg-4 {
   background-image: url("/assets/fox3.jpeg");
-  min-height: 400px;
+  min-height: 280px;
 }
 
 
