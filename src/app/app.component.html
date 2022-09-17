@@ -68,7 +68,7 @@
     </div>
 
     <!-- Hide this text on small devices -->
-    <div class="fx-col m6 fx-hide-small fx-padding-large">
+    <div class="fx-col m6 fx-hide-small">
       <p>Originating from the Great Lakes area of Western New York. I was wildly
         interested at a young age in how computers, programs, and how malware worked.
         Many evenings were spent exploring vxheavens and other warez sites for code to
@@ -80,34 +80,61 @@
         my favorite being Web Application security and bug hunting.</p>
       <p>Building things is just as satisfying as breaking them though!
       I've since taken up software development, my favorite language being Java. </p>
+      <div class="resume">
+        <div *ngIf="!portfolio"><button (click)="viewPortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">Load Resume</button></div>
+        <div *ngIf="portfolio"><button (click)="closePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">CLOSE</button></div>
+      </div>
     </div>
+
+    <div class="resume" *ngIf="portfolio">
+      <div class="fx-col m3">
+        <img src="/fximages/p3.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
+      </div>
+      <iframe width="100%" height="600" src="https://docs.google.com/document/d/e/2PACX-1vSVK9ys5TeVxGbI2zyTlK72pza257r5fAE9giFHjuDQpCR3yhNSR3M3bMWf5S3ASUyDrRSq96t_4gmy/pub?embedded=true"></iframe>
+    </div>
+
+
   </div>
-  <br><p class="fx-large fx-center fx-padding-16">Currently learning:</p>
-  <br><p class="fx-large fx-center fx-padding-16">Technologies I enjoy:</p>
-  <br><p class="fx-large fx-center fx-padding-16"><em>I love</em></p>
-  <p class="fx-wide"><i class="fa fa-hashtag"></i>Coding</p>
-  <div class="fx-light-grey">
-    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:85%">85%</div>
-  </div>
-  <br>
-  <p class="fx-wide"><i class="fa fa-code"></i>Web Design</p>
-  <div class="fx-light-grey">
-    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:70%">70%</div>
-  </div>
-  <br>
-  <p class="fx-wide"><i class="fa fa-camera"></i>Photography</p>
-  <div class="fx-light-grey">
-    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
-  </div>
-  <br>
-  <p class="fx-wide"><i class="fa fa-motorcycle"></i>Motocycles</p>
-  <div class="fx-light-grey">
-    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
-  </div>
-  <br>
-  <p class="fx-wide"><i class="fa fa-heart"></i>Cats</p>
-  <div class="fx-light-grey">
-    <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:100%">100%</div>
+  <!--https://github.com/marwin1991/profile-technology-icons#-java -->
+  <br><p class="fx-large fx-center fx-padding-16">Currently learning:</p><br>
+  <img src="https://user-images.githubusercontent.com/25181517/183868728-b2e11072-00a5-47e2-8a4e-4ebbb2b8c554.png" height="90" width="90">
+  <br><p class="fx-large fx-center fx-padding-16">Technologies I enjoy:</p><br>
+  <img src="https://user-images.githubusercontent.com/25181517/186884156-e63da389-f3e1-4dca-a6c1-d76e886ba22a.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/121302773-7aa5d680-c8fa-11eb-98aa-e016fdb2de32.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/183890595-779a7e64-3f43-4634-bad2-eceef4e80268.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/183891303-41f257f8-6b3d-487c-aa56-c497b880d0fb.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/183868728-b2e11072-00a5-47e2-8a4e-4ebbb2b8c554.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/117207330-263ba280-adf4-11eb-9b97-0ac5b40bc3be.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/183896128-ec99105a-ec1a-4d85-b08b-1aa1620b2046.png" height="90" width="90">
+  <img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" height="90" width="90">
+
+  <div hidden="true">
+    <br><p class="fx-large fx-center fx-padding-16"><em>I love</em></p>
+    <p class="fx-wide"><i class="fa fa-hashtag"></i>Coding</p>
+    <div class="fx-light-grey">
+      <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:90%">90%</div>
+    </div>
+    <br>
+    <p class="fx-wide"><i class="fa fa-code"></i>Web Design</p>
+    <div class="fx-light-grey">
+      <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:70%">70%</div>
+    </div>
+    <br>
+    <p class="fx-wide"><i class="fa fa-camera"></i>Photography</p>
+    <div class="fx-light-grey">
+      <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:75%">75%</div>
+    </div>
+    <br>
+    <p class="fx-wide"><i class="fa fa-motorcycle"></i>Motocycles</p>
+    <div class="fx-light-grey">
+      <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:80%">80%</div>
+    </div>
+    <br>
+    <p class="fx-wide"><i class="fa fa-heart"></i>Cats</p>
+    <div class="fx-light-grey">
+      <div class="fx-container fx-padding-small fx-dark-grey fx-center" style="width:100%">100%</div>
+    </div>
   </div>
   <br>
 </div>
@@ -118,53 +145,20 @@
 <!-- Container (Portfolio Section) -->
 <div class="fx-content fx-container fx-padding-64" id="portfolio">
   <p class="fx-center"><em>Here is some of my work</em></p><br>
-  <div>
-  <a href="https://github.com/helloimalemur"><img src="assets/icons/github.svg" width="62">   <h3>Helloimalemur</h3></a>
+  <div class="fx-container fx-row-padding">
+    <div class="fx-col m3">
+    <a href="https://github.com/helloimalemur"><img src="assets/icons/github.svg" width="62">   <h3>Helloimalemur</h3></a>
+    </div>
+    <br>
+    <div class="fx-col m3">
+      <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
+      Koonts.net is an example implementation of Angular and Spring Boot Java using Hibernate to facilitate the connection of a Docker MySQL instance.
+    </div>
   </div>
-  <br><br><br>
+  <br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
 
-  <div class="fx-row-padding fx-center" *ngIf="portfolio">
-
-    <div class="fx-col m3">
-      <img src="/assets/atlas2.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p3.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p4.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p5.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p6.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p7.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-    <div class="fx-col m3">
-      <img src="/fximages/p8.jpg" style="width:100%" onclick="onClick()" class="fx-hover-opacity" alt="">
-      asdf
-    </div>
-
-  </div>
-  <div *ngIf="!portfolio"><button (click)="viewPortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">LOAD MORE</button></div>
-  <div *ngIf="portfolio"><button (click)="closePortfolio()" class="fx-button fx-padding-large fx-light-grey" style="margin-top:64px">CLOSE</button></div>
 
   <br>
 </div>
