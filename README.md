@@ -1,7 +1,7 @@
 # Koonts
 
 My personal site, Koonts.net.
-Using <a href="https://github.com/helloimalemur/java-springboot-mysql">Spring Boot & MySQL</a> as the backend.
+Using <a href="https://github.com/helloimalemur/java-springboot-mysql"> Java, Spring Boot, Spring Hibernate, and Docker  MySQL</a> as the backend.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
