@@ -1,13 +1,14 @@
 # Koonts
 
-My personal site, Koonts.net.
-Using <a href="https://github.com/helloimalemur/java-springboot-mysql">Spring Boot & MySQL</a> as the backend.
+My personal site, <a href="http://koonts.net">Koonts.net</a>.
+Using <a href="https://github.com/helloimalemur/java-springboot-mysql"> Java, Spring Boot, Spring Hibernate, and Docker  MySQL</a> as the backend.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve --host 0.0.0.0` for a dev server. Navigate to `http://localhost:4200/` or `http://<IP>:4200/` from another device.
+The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
