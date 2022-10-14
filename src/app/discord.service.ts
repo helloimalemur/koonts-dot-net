@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpBackend, HttpClient, HttpHeaders} from "@angular/common/http";
 import {Ticket} from "./ticket/ticket";
 import {Observable} from "rxjs";
 import {notif} from "./discordnotif/notif";
@@ -9,7 +9,7 @@ import {notif} from "./discordnotif/notif";
 })
 export class DiscordService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private HttpBackend: HttpBackend) { }
 
   url="https://discordapp.com/api/webhooks/1014319311197847593/jjY11oRqtES_FS7lz330mqi_4rSl-zA_rNvcg2yDySriqStqmuZtntLsF8dKY1sQvrEW";
   #url="http://127.0.0.1:8080";
