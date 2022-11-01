@@ -119,7 +119,7 @@ a{color:inherit}
 .fx-centered tr th,.fx-centered tr td{text-align:center}
 .fx-table td,.fx-table th,.fx-table-all td,.fx-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
 .fx-table th:first-child,.fx-table td:first-child,.fx-table-all th:first-child,.fx-table-all td:first-child{padding-left:16px}
-.fx-btn,.fx-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:black;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.fx-btn,.fx-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color: #a89292;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
 .fx-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
 .fx-btn,.fx-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .fx-disabled,.fx-btn:disabled,.fx-button:disabled{cursor:not-allowed;opacity:0.3}
@@ -210,7 +210,7 @@ a{color:inherit}
 .fx-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
 .fx-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
 .fx-card,.fx-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
-.fx-card-4,.fx-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.fx-card-4,.fx-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(201, 174, 174, 0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
 .fx-spin{animation:fx-spin 2s infinite linear}@keyframes fx-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
 .fx-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
 .fx-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
@@ -243,7 +243,7 @@ a{color:inherit}
 .fx-padding-top-64{padding-top:64px!important}.fx-padding-top-48{padding-top:48px!important}
 .fx-padding-top-32{padding-top:32px!important}.fx-padding-top-24{padding-top:24px!important}
 .fx-left{float:left!important}.fx-right{float:right!important}
-.fx-button:hover{color:#000!important;background-color:#ccc!important}
+.fx-button:hover{color: #000000 !important;background-color:#ccc!important}
 .fx-transparent,.fx-hover-none:hover{background-color:transparent!important}
 .fx-hover-none:hover{box-shadow:none!important}
 /* Colors */
