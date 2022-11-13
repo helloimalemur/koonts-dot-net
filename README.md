@@ -22,6 +22,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run NON-root;
 ```bash <(curl -s https://raw.githubusercontent.com/helloimalemur/koonts-dot-net/master/rebuild-site.sh)```
 
+Run AS-root (for automation);
+```bash <(curl -s https://raw.githubusercontent.com/helloimalemur/koonts-dot-net/master/rebuild-site-root.sh)```
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
