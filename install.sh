@@ -6,8 +6,6 @@ git clone https://github.com/helloimalemur/koonts-dot-net
 cd koonts-dot-net/
 ng config -g cli.warnings.versionMismatch false
 export NG_CLI_ANALYTICS="false"
-echo N | ng analytics off
-ng build
 npm install node
 ng build
 rm -rf ~/dist
