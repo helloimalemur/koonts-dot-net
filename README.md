@@ -20,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Install
 Run NON-root;
-```bash <(curl -s https://raw.githubusercontent.com/helloimalemur/koonts-dot-net/master/install.sh)```
+```bash <(curl -s https://raw.githubusercontent.com/helloimalemur/koonts-dot-net/master/rebuild-site.sh)```
 
 ## Running unit tests
 
