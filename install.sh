@@ -4,10 +4,11 @@ cd ~
 rm -rf koonts-dot-net/
 git clone https://github.com/helloimalemur/koonts-dot-net
 cd koonts-dot-net/
+echo "setting env variable!.."
 export NG_CLI_ANALYTICS="false"
-ng config -g cli.warnings.versionMismatch false
 echo "analytics off!.."
 ng analytics off
+#ng config -g cli.warnings.versionMismatch false
 echo "installing node!.."
 npm install node
 echo "attempting to build!.."
