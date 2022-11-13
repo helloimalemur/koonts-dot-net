@@ -10,6 +10,11 @@ ng analytics off
 ng build
 npm install node
 ng build
-sudo rm -rf /srv/http/*
-sudo mv dist/koonts/* /srv/http/
+rm -rf ~/dist
+mkdir ~/dist
+mv dist/koonts/* ~/dist
 rm -rf koonts-dot-net/
+
+
+#sudo rm -rf /srv/http/*
+#sudo mv dist/koonts/* /srv/http/
