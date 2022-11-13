@@ -8,7 +8,6 @@ echo "setting env variable!.."
 export NG_CLI_ANALYTICS="false"
 echo "analytics off!.."
 ng analytics off
-#ng config -g cli.warnings.versionMismatch false
 echo "installing node!.."
 npm install node
 echo "attempting to build!.."
@@ -17,7 +16,3 @@ rm -rf ~/dist
 mkdir ~/dist
 mv dist/koonts/* ~/dist
 rm -rf koonts-dot-net/
-
-
-#sudo rm -rf /srv/http/*
-#sudo mv dist/koonts/* /srv/http/
