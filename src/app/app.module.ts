@@ -19,7 +19,6 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { DiscordnotifComponent } from './discordnotif/discordnotif.component';
 import { TicketresultComponent } from './ticketresult/ticketresult.component';
 
-import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 
 
@@ -48,8 +47,6 @@ const routes: Routes = [];
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgxGoogleAnalyticsModule.forRoot('G-1XQBYRGJF5'),
-    NgxGoogleAnalyticsRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
